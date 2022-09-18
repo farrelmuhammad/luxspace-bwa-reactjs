@@ -10,7 +10,7 @@ import Sitemap from "../parts/Homepage/Sitemap";
 const Homepage = () => {
   return (
     <>
-      <Header theme="white" position="absolute" />
+      <Header />
       <Hero />
       <BrowseRoom />
       <JustArrived />

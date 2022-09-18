@@ -1,6 +1,11 @@
 import React from 'react'
+import Img1 from '../../assets/images/content/image-arrived-1.png';
+import Img2 from '../../assets/images/content/image-arrived-2.png';
+import Img3 from '../../assets/images/content/image-arrived-3.png';
+import Img4 from '../../assets/images/content/image-arrived-4.png';
+import Img5 from '../../assets/images/content/image-arrived-5.png';
 
-const JustArrived = () => {
+export default function JustArrived() {
   return (
     <section className="flex flex-col py-16">
       <div className="container mx-auto mb-4">
@@ -17,7 +22,7 @@ const JustArrived = () => {
           <div className="px-4 relative card group">
             <div
               className="rounded-xl overflow-hidden card-shadow relative"
-              style="width: 287px; height: 386px"
+              style={{width: "287px", height: "386px"}}
             >
               <div
                 className="absolute opacity-0 group-hover:opacity-100 transition duration-200 flex items-center justify-center w-full h-full bg-black bg-opacity-35"
@@ -43,7 +48,7 @@ const JustArrived = () => {
                 </div>
               </div>
               <img
-                src="./images/content/image-arrived-1.png"
+                src={Img1}
                 alt=""
                 className="w-full h-full object-cover object-center"
               />
@@ -58,7 +63,7 @@ const JustArrived = () => {
           <div className="px-4 relative card group">
             <div
               className="rounded-xl overflow-hidden card-shadow relative"
-              style="width: 287px; height: 386px"
+              style={{width: "287px", height: "386px"}}
             >
               <div
                 className="absolute opacity-0 group-hover:opacity-100 transition duration-200 flex items-center justify-center w-full h-full bg-black bg-opacity-35"
@@ -84,7 +89,7 @@ const JustArrived = () => {
                 </div>
               </div>
               <img
-                src="./images/content/image-arrived-2.png"
+                src={Img2}
                 alt=""
                 className="w-full h-full object-cover object-center"
               />
@@ -99,7 +104,7 @@ const JustArrived = () => {
           <div className="px-4 relative card group">
             <div
               className="rounded-xl overflow-hidden card-shadow relative"
-              style="width: 287px; height: 386px"
+              style={{width: "287px", height: "386px"}}
             >
               <div
                 className="absolute opacity-0 group-hover:opacity-100 transition duration-200 flex items-center justify-center w-full h-full bg-black bg-opacity-35"
@@ -125,7 +130,7 @@ const JustArrived = () => {
                 </div>
               </div>
               <img
-                src="./images/content/image-arrived-3.png"
+                src={Img3}
                 alt=""
                 className="w-full h-full object-cover object-center"
               />
@@ -140,7 +145,7 @@ const JustArrived = () => {
           <div className="px-4 relative card group">
             <div
               className="rounded-xl overflow-hidden card-shadow relative"
-              style="width: 287px; height: 386px"
+              style={{width: "287px", height: "386px"}}
             >
               <div
                 className="absolute opacity-0 group-hover:opacity-100 transition duration-200 flex items-center justify-center w-full h-full bg-black bg-opacity-35"
@@ -166,7 +171,7 @@ const JustArrived = () => {
                 </div>
               </div>
               <img
-                src="./images/content/image-arrived-4.png"
+                src={Img4}
                 alt=""
                 className="w-full h-full object-cover object-center"
               />
@@ -181,7 +186,7 @@ const JustArrived = () => {
           <div className="px-4 relative card group">
             <div
               className="rounded-xl overflow-hidden card-shadow relative"
-              style="width: 287px; height: 386px"
+              style={{width: "287px", height: "386px"}}
             >
               <div
                 className="absolute opacity-0 group-hover:opacity-100 transition duration-200 flex items-center justify-center w-full h-full bg-black bg-opacity-35"
@@ -207,7 +212,7 @@ const JustArrived = () => {
                 </div>
               </div>
               <img
-                src="./images/content/image-arrived-5.png"
+                src={Img5}
                 alt=""
                 className="w-full h-full object-cover object-center"
               />
@@ -222,7 +227,7 @@ const JustArrived = () => {
           <div className="px-4 relative card group">
             <div
               className="rounded-xl overflow-hidden card-shadow relative"
-              style="width: 287px; height: 386px"
+              style={{width: "287px", height: "386px"}}
             >
               <div
                 className="absolute opacity-0 group-hover:opacity-100 transition duration-200 flex items-center justify-center w-full h-full bg-black bg-opacity-35"
@@ -248,7 +253,7 @@ const JustArrived = () => {
                 </div>
               </div>
               <img
-                src="./images/content/image-arrived-3.png"
+                src={Img3}
                 alt=""
                 className="w-full h-full object-cover object-center"
               />
@@ -263,7 +268,7 @@ const JustArrived = () => {
           <div className="px-4 relative card group">
             <div
               className="rounded-xl overflow-hidden card-shadow relative"
-              style="width: 287px; height: 386px"
+              style={{width: "287px", height: "386px"}}
             >
               <div
                 className="absolute opacity-0 group-hover:opacity-100 transition duration-200 flex items-center justify-center w-full h-full bg-black bg-opacity-35"
@@ -289,7 +294,7 @@ const JustArrived = () => {
                 </div>
               </div>
               <img
-                src="./images/content/image-arrived-1.png"
+                src={Img1}
                 alt=""
                 className="w-full h-full object-cover object-center"
               />
@@ -305,5 +310,3 @@ const JustArrived = () => {
     </section>
   )
 }
-
-export default JustArrived

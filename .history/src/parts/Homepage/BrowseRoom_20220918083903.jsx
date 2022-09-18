@@ -1,4 +1,8 @@
 import React from 'react'
+import Img1 from '../../assets/images/content/image-catalog-1.png';
+import Img2 from '../../assets/images/content/image-catalog-2.png';
+import Img3 from '../../assets/images/content/image-catalog-3.png';
+import Img4 from '../../assets/images/content/image-catalog-4.png';
 
 const BrowseRoom = () => {
   return (
@@ -12,11 +16,11 @@ const BrowseRoom = () => {
         <div className="grid grid-rows-2 grid-cols-9 gap-4">
           <div
             className="relative col-span-9 row-span-1 md:col-span-4 card"
-            style="height: 180px"
+            style={{ height: "180px" }}
           >
             <div className="card-shadow rounded-xl">
               <img
-                src="./images/content/image-catalog-1.png"
+                src={Img1}
                 alt=""
                 className="w-full h-full object-cover object-center overlay overflow-hidden rounded-xl"
               />
@@ -36,7 +40,7 @@ const BrowseRoom = () => {
           >
             <div className="card-shadow rounded-xl">
               <img
-                src="./images/content/image-catalog-3.png"
+                src={Img3}
                 alt=""
                 className="w-full h-full object-cover object-center overlay overflow-hidden rounded-xl"
               />
@@ -56,7 +60,7 @@ const BrowseRoom = () => {
           >
             <div className="card-shadow rounded-xl">
               <img
-                src="./images/content/image-catalog-4.png"
+                src={Img4}
                 alt=""
                 className="w-full h-full object-cover object-center overlay overflow-hidden rounded-xl"
               />
@@ -74,7 +78,7 @@ const BrowseRoom = () => {
           <div className="relative col-span-9 row-span-1 md:col-span-4 card">
             <div className="card-shadow rounded-xl">
               <img
-                src="./images/content/image-catalog-2.png"
+                src={Img2}
                 alt=""
                 className="w-full h-full object-cover object-center overlay overflow-hidden rounded-xl"
               />

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/images/content/logo.png";
 
-const Header = ({ theme, position }) => {
+export default function Header({ theme, position }) {
   return (
     <header className={[position, "w-full z-50 px-4"].join(" ")}>
       <div className="container mx-auto py-5">
@@ -120,5 +120,3 @@ const Header = ({ theme, position }) => {
     </header>
   );
 };
-
-export default Header;

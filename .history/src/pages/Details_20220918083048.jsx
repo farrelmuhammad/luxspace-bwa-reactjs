@@ -1,19 +1,19 @@
 import React from "react";
+import Breadcrumb from "../components/Breadcrumb";
 import Footer from "../parts/Footer";
 import Header from "../parts/Header";
-import Hero from "../parts/Hero";
-import BrowseRoom from "../parts/Homepage/BrowseRoom";
 import Clients from "../parts/Homepage/Clients";
-import JustArrived from "../parts/Homepage/JustArrived";
 import Sitemap from "../parts/Homepage/Sitemap";
 
 const Homepage = () => {
   return (
     <>
-      <Header theme="white" position="absolute" />
-      <Hero />
-      <BrowseRoom />
-      <JustArrived />
+      <Header theme="black" />
+      <Breadcrumb list={[
+        { url: "/", name: "Home" },
+        { url: "/categories/91231", name: "Office Room" },
+        { url: "/categories/91231/products/7888", name: "Details" },
+      ]} />
       <Clients />
       <Sitemap />
       <Footer />

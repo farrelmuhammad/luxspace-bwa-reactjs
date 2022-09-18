@@ -4,7 +4,7 @@ import Logo from "../assets/images/content/logo.png";
 
 const Header = ({ theme, position }) => {
   return (
-    <header className={[position, "w-full z-50 px-4"].join(" ")}>
+    <header className="absolute w-full z-50 px-4">
       <div className="container mx-auto py-5">
         <div className="flex flex-stretch items-center">
           <div className="w-56 items-center flex">
@@ -29,7 +29,7 @@ const Header = ({ theme, position }) => {
                     theme === "white"
                       ? "text-black md text-white"
                       : "text-white md:text-black ",
-                  ].join(" ")}
+                  ]}
                 >
                   Showcase
                 </Link>
@@ -42,7 +42,7 @@ const Header = ({ theme, position }) => {
                     theme === "white"
                       ? "text-black md text-white"
                       : "text-white md:text-black ",
-                  ].join(" ")}
+                  ]}
                 >
                   Catalog
                 </Link>
@@ -55,7 +55,7 @@ const Header = ({ theme, position }) => {
                     theme === "white"
                       ? "text-black md text-white"
                       : "text-white md:text-black ",
-                  ].join(" ")}
+                  ]}
                 >
                   Delivery
                 </Link>
@@ -68,7 +68,7 @@ const Header = ({ theme, position }) => {
                     theme === "white"
                       ? "text-black md text-white"
                       : "text-white md:text-black ",
-                  ].join(" ")}
+                  ]}
                 >
                   Rewards
                 </Link>

@@ -7,7 +7,7 @@ const RouteApp = () => {
     return (
         <>
             <Routes>
-                <Route exact to="/home" element={<Homepage />} />
+                <Route to="/" element={<Homepage />} />
                 <Route to="/categories" element={<Details />} />
             </Routes>
         </>

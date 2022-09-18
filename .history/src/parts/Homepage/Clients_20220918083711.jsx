@@ -3,7 +3,7 @@ import Logo1 from '../../assets/images/content/logo-adobe.svg';
 import Logo2 from '../../assets/images/content/logo-ikea.svg';
 import Logo3 from '../../assets/images/content/logo-hermanmiller.svg';
 
-const Clients = () => {
+export default function Clients() {
   return (
     <section className="container mx-auto">
       <div className="flex justify-center flex-wrap">
@@ -28,4 +28,3 @@ const Clients = () => {
   );
 };
 
-export default Clients;

@@ -7,7 +7,7 @@ import Clients from "../parts/Homepage/Clients";
 import JustArrived from "../parts/Homepage/JustArrived";
 import Sitemap from "../parts/Homepage/Sitemap";
 
-const Homepage = () => {
+export default function Homepage() {
   return (
     <>
       <Header theme="white" position="absolute" />
@@ -20,5 +20,3 @@ const Homepage = () => {
     </>
   );
 };
-
-export default Homepage;

@@ -1,3 +1,4 @@
+import Homepage from "./pages/Homepage";
 import RouteApp from "./routes";
 
 function App() {

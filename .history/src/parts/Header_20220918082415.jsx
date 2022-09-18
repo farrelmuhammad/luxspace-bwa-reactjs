@@ -4,16 +4,14 @@ import Logo from "../assets/images/content/logo.png";
 
 const Header = ({ theme, position }) => {
   return (
-    <header className={[position, "w-full z-50 px-4"].join(" ")}>
+    <header className="absolute w-full z-50 px-4">
       <div className="container mx-auto py-5">
         <div className="flex flex-stretch items-center">
           <div className="w-56 items-center flex">
-            <Link to="/">
-              <img
-                src={Logo}
-                alt="Luxspace | Fulfill your house with beautiful furniture"
-              />
-            </Link>
+            <img
+              src={Logo}
+              alt="Luxspace | Fulfill your house with beautiful furniture"
+            />
           </div>
           <div className="w-full"></div>
           <div className="w-auto">
@@ -29,7 +27,7 @@ const Header = ({ theme, position }) => {
                     theme === "white"
                       ? "text-black md text-white"
                       : "text-white md:text-black ",
-                  ].join(" ")}
+                  ]}
                 >
                   Showcase
                 </Link>
@@ -42,7 +40,7 @@ const Header = ({ theme, position }) => {
                     theme === "white"
                       ? "text-black md text-white"
                       : "text-white md:text-black ",
-                  ].join(" ")}
+                  ]}
                 >
                   Catalog
                 </Link>
@@ -55,7 +53,7 @@ const Header = ({ theme, position }) => {
                     theme === "white"
                       ? "text-black md text-white"
                       : "text-white md:text-black ",
-                  ].join(" ")}
+                  ]}
                 >
                   Delivery
                 </Link>
@@ -68,7 +66,7 @@ const Header = ({ theme, position }) => {
                     theme === "white"
                       ? "text-black md text-white"
                       : "text-white md:text-black ",
-                  ].join(" ")}
+                  ]}
                 >
                   Rewards
                 </Link>
