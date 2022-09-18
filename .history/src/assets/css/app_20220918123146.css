@@ -82,60 +82,62 @@ ul.breadcrumb li:last-child a {
 
 /* slider */
 
-.slider {
-  @apply flex my-4 flex-col;
-}
-
-.slider .thumbnail {
-  @apply w-screen order-last -mx-2 overflow-auto flex pl-4;
-}
-
-.slider .thumbnail .item {
-  @apply rounded relative rounded-lg mb-4 cursor-pointer;
-  width: 106px;
-  height: 106px;
-}
-
-.slider .thumbnail .item:after {
-  content: "";
-  @apply transition duration-200 absolute inset-0 bg-black bg-opacity-0 border-2 border-black border-opacity-0 rounded-lg;
-}
-
-.slider .thumbnail .item.selected:after {
-  content: "";
-  @apply bg-opacity-25 border-opacity-100;
-}
-
-.slider .preview {
-  @apply mb-4 px-4;
-  height: 320px;
-}
-
-@media only screen and (min-width: 768px) {
+@layer components {
   .slider {
-    @apply flex-row;
+    @apply flex my-4 flex-col;
   }
+  
   .slider .thumbnail {
-    @apply w-auto order-first block overflow-visible pl-0;
+    @apply w-screen order-last -mx-2 overflow-auto flex pl-4;
   }
+  
+  .slider .thumbnail .item {
+    @apply rounded relative rounded-lg mb-4 cursor-pointer;
+    width: 106px;
+    height: 106px;
+  }
+  
+  .slider .thumbnail .item:after {
+    content: "";
+    @apply transition duration-200 absolute inset-0 bg-black bg-opacity-0 border-2 border-black border-opacity-0 rounded-lg;
+  }
+  
+  .slider .thumbnail .item.selected:after {
+    content: "";
+    @apply bg-opacity-25 border-opacity-100;
+  }
+  
   .slider .preview {
-    height: 600px;
-    width: 560px;
+    @apply mb-4 px-4;
+    height: 320px;
   }
-}
-
-a.cart svg g circle.dot {
-  @apply hidden;
-}
-
-a.cart.cart-filled svg g circle.dot {
-  @apply block;
-}
-
-button[disabled] {
-  @apply bg-gray-300 hover:bg-gray-300 text-gray-400 hover:text-gray-400 cursor-not-allowed;
-}
-
-section:not(.bg-gray-100) + section.sitemap > div {
-  @apply border-t;
+  
+  @media only screen and (min-width: 768px) {
+    .slider {
+      @apply flex-row;
+    }
+    .slider .thumbnail {
+      @apply w-auto order-first block overflow-visible pl-0;
+    }
+    .slider .preview {
+      height: 600px;
+      width: 560px;
+    }
+  }
+  
+  a.cart svg g circle.dot {
+    @apply hidden;
+  }
+  
+  a.cart.cart-filled svg g circle.dot {
+    @apply block;
+  }
+  
+  button[disabled] {
+    @apply bg-gray-300 hover:bg-gray-300 text-gray-400 hover:text-gray-400 cursor-not-allowed;
+  }
+  
+  section:not(.bg-gray-100) + section.sitemap > div {
+    @apply border-t;
+  }
 }

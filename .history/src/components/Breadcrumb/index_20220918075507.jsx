@@ -2,9 +2,9 @@ import React from "react";
 
 const Breadcrumb = () => {
   return (
-    <section class="bg-gray-100 py-8 px-4">
-      <div class="container mx-auto">
-        <ul class="breadcrumb">
+    <section className="bg-gray-100 py-8 px-4">
+      <div className="container mx-auto">
+        <ul className="breadcrumb">
           <li>
             <a href="index.html">Home</a>
           </li>

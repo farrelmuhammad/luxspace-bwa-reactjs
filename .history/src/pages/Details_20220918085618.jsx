@@ -1,7 +1,6 @@
 import React from "react";
 import Breadcrumb from "../components/Breadcrumb";
 import ProductDetails from "../parts/Details/ProductDetails";
-import Suggestions from "../parts/Details/Suggestions";
 import Footer from "../parts/Footer";
 import Header from "../parts/Header";
 import Clients from "../parts/Homepage/Clients";
@@ -17,7 +16,7 @@ const Details = () => {
         { url: "/categories/91231/products/7888", name: "Details" },
       ]} />
       <ProductDetails />
-      <Suggestions />
+      <Clients />
       <Sitemap />
       <Footer />
     </>

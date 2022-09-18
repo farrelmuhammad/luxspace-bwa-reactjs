@@ -5,23 +5,23 @@ import Logo3 from '../../assets/images/content/logo-hermanmiller.svg';
 
 const Clients = () => {
   return (
-    <section class="container mx-auto">
-      <div class="flex justify-center flex-wrap">
-        <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4 md:my-0">
-          <img src={Logo1} alt="" class="mx-auto" />
+    <section className="container mx-auto">
+      <div className="flex justify-center flex-wrap">
+        <div className="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4 md:my-0">
+          <img src={Logo1} alt="" className="mx-auto" />
         </div>
-        <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4 md:my-0">
-          <img src="./images/content/logo-ikea.svg" alt="" class="mx-auto" />
+        <div className="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4 md:my-0">
+          <img src="./images/content/logo-ikea.svg" alt="" className="mx-auto" />
         </div>
-        <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4 md:my-0">
+        <div className="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4 md:my-0">
           <img
             src={Logo2}
             alt=""
-            class="mx-auto"
+            className="mx-auto"
           />
         </div>
-        <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4 md:my-0">
-          <img src={Logo3} alt="" class="mx-auto" />
+        <div className="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4 md:my-0">
+          <img src={Logo3} alt="" className="mx-auto" />
         </div>
       </div>
     </section>

@@ -18,6 +18,7 @@ const Details = () => {
       ]} />
       <ProductDetails />
       <Suggestions />
+      <Clients />
       <Sitemap />
       <Footer />
     </>
