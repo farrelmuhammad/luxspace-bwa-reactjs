@@ -1,15 +1,15 @@
 import React from "react";
 import Breadcrumb from "../components/Breadcrumb";
 import Header from "../parts/Header";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 import Sitemap from "../parts/Homepage/Sitemap";
 import Footer from "../parts/Footer";
-import ImgSuccess from "../assets/images/content/illustration-success.png";
+import ImgSuccess from "../assets/images/content/illustration-success.png"
 
 const Congratulation = () => {
   return (
     <>
-      <Header theme="black" />
+     <Header theme="black" />
       <Breadcrumb
         list={[
           { url: "/", name: "Home" },
@@ -20,7 +20,10 @@ const Congratulation = () => {
         <div class="container mx-auto min-h-screen">
           <div class="flex flex-col items-center justify-center">
             <div class="w-full md:w-4/12 text-center">
-              <img src={ImgSuccess} alt="congrats illustration" />
+              <img
+                src={ImgSuccess}
+                alt="congrats illustration"
+              />
               <h2 class="text-3xl font-semibold mb-6">Ah yes it’s success!</h2>
               <p class="text-lg mb-12">
                 Furniture yang anda beli akan kami kirimkan saat ini juga so now

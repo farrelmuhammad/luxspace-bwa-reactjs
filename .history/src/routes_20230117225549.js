@@ -10,7 +10,7 @@ const RouteApp = () => {
     return (
         <>
             <Routes>
-                <Route exact path="/" element={<Homepage />} />
+                <Route path="/" exact element={<Homepage />} />
                 <Route path="/categories/:idc" element={<Details />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/congratulation" element={<Congratulation />} />
