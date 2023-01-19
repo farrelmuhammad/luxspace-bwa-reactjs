@@ -108,7 +108,7 @@ const BrowseRoom = () => {
         </div>
         <div className="grid grid-rows-2 grid-cols-9 gap-4">
           {isLoading
-            ? <Loading ratio={ratioClassNames} />
+            ? "loading"
             : data.data.map((item, index) => {
                 return (
                   <div
