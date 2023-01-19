@@ -6,12 +6,8 @@ import BrowseRoom from "../parts/Homepage/BrowseRoom";
 import Clients from "../parts/Homepage/Clients";
 import JustArrived from "../parts/Homepage/JustArrived";
 import Sitemap from "../parts/Homepage/Sitemap";
-import useScrollAnchor from "../helpers/hooks/useScrollAnchor";
-import useModalDOM from "../helpers/hooks/useModalDOM";
 
 const Homepage = () => {
-  useScrollAnchor();
-  useModalDOM();
   return (
     <>
       <Header theme="white" position="absolute" />
