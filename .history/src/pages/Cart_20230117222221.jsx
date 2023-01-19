@@ -16,9 +16,9 @@ const Cart = () => {
           { url: "/cart", name: "Shopping Cart" },
         ]}
       />
-      <section class="md:py-16">
-        <div class="container mx-auto px-4">
-          <div class="flex -mx-4 flex-wrap"></div>
+      <section className="md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="flex -mx-4 flex-wrap"></div>
         </div>
       </section>
       <Sitemap />
