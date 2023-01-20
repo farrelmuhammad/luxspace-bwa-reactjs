@@ -64,13 +64,15 @@ const JustArrived = () => {
                         </div>
                       </div>
                       <img
-                        src={item.imageUrl}
+                        src={Img1}
                         alt=""
                         className="w-full h-full object-cover object-center"
                       />
                     </div>
-                    <h5 className="text-lg font-semibold mt-4">{item.title}</h5>
-                    <span className="">IDR {item.price}</span>
+                    <h5 className="text-lg font-semibold mt-4">
+                      Cangkir Mauttie
+                    </h5>
+                    <span className="">IDR 89.300</span>
                     <a href="details.html" className="stretched-link"></a>
                   </div>
                 );

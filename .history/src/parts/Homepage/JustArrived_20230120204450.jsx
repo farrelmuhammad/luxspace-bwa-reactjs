@@ -5,7 +5,10 @@ import Img3 from '../../assets/images/content/image-arrived-3.png';
 import Img4 from '../../assets/images/content/image-arrived-4.png';
 import Img5 from '../../assets/images/content/image-arrived-5.png';
 
-export default function JustArrived() {
+import useAsync from "../../helpers/hooks/useAsync";
+import fetch from "../../helpers/fetch";
+
+const JustArrived = () => {
   return (
     <section className="flex flex-col py-16">
       <div className="container mx-auto mb-4">
@@ -310,3 +313,5 @@ export default function JustArrived() {
     </section>
   )
 }
+
+export default JustArrived

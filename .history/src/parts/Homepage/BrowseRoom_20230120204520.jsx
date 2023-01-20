@@ -70,7 +70,7 @@ const BrowseRoom = () => {
     );
   }, [run]);
 
-  // console.log(data, status, error);
+  console.log(data, status, error);
 
   const ratioClassNames = {
     wrapper: {

@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Img1 from '../../assets/images/content/image-arrived-1.png';
 import Img2 from '../../assets/images/content/image-arrived-2.png';
 import Img3 from '../../assets/images/content/image-arrived-3.png';
+import Img4 from '../../assets/images/content/image-arrived-4.png';
+import Img5 from '../../assets/images/content/image-arrived-5.png';
+
+import useAsync from "../../helpers/hooks/useAsync";
+import fetch from "../../helpers/fetch";
 
 const JustArrived = () => {
+  const { data, status, error, run, isLoading } = useAsync();
+
+  useEffect(() => {
+    run(
+      fetch({
+        url: "/api/categories/?page=1&limit=4",
+      })
+    );
+  }, [run]);
+
+  console.log(data, status, error);
+
   return (
     <section className="flex flex-col py-16">
       <div className="container mx-auto mb-4">
@@ -169,7 +186,7 @@ const JustArrived = () => {
                 </div>
               </div>
               <img
-                src="./images/content/image-arrived-4.png"
+                src={Img4}
                 alt=""
                 className="w-full h-full object-cover object-center"
               />
@@ -210,7 +227,7 @@ const JustArrived = () => {
                 </div>
               </div>
               <img
-                src="./images/content/image-arrived-5.png"
+                src={Img5}
                 alt=""
                 className="w-full h-full object-cover object-center"
               />
@@ -251,7 +268,7 @@ const JustArrived = () => {
                 </div>
               </div>
               <img
-                src="./images/content/image-arrived-3.png"
+                src={Img3}
                 alt=""
                 className="w-full h-full object-cover object-center"
               />
@@ -292,7 +309,7 @@ const JustArrived = () => {
                 </div>
               </div>
               <img
-                src="./images/content/image-arrived-1.png"
+                src={Img1}
                 alt=""
                 className="w-full h-full object-cover object-center"
               />

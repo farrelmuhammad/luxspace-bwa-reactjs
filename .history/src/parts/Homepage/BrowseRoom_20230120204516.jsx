@@ -60,7 +60,7 @@ function Loading({ ratio = {} }) {
 }
 
 const BrowseRoom = () => {
-  const { data, status, error, run, isLoading } = useAsync();
+  const { data, status, error, run, isLoading } = useAsync({});
 
   useEffect(() => {
     run(
@@ -70,7 +70,7 @@ const BrowseRoom = () => {
     );
   }, [run]);
 
-  // console.log(data, status, error);
+  console.log(data, status, error);
 
   const ratioClassNames = {
     wrapper: {
