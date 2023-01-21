@@ -1,25 +1,14 @@
 import React, { useEffect, useRef } from "react";
+import Img1 from "../../assets/images/content/image-arrived-1.png";
+import Img2 from "../../assets/images/content/image-arrived-2.png";
+import Img3 from "../../assets/images/content/image-arrived-3.png";
+import Img4 from "../../assets/images/content/image-arrived-4.png";
+import Img5 from "../../assets/images/content/image-arrived-5.png";
+
 import useAsync from "../../helpers/hooks/useAsync";
 import fetch from "../../helpers/fetch";
 import { Link } from "react-router-dom";
 import Carousel from "../../components/Carousel";
-
-function Loading() {
-  return Array(6)
-    .fill()
-    .map((_, index) => {
-      return (
-        <div className="px-4 relative card group" key={index}>
-          <div
-            className="rounded-xl bg-gray-300 overflow-hidden card-shadow relative"
-            style={{ width: "287px", height: "386px" }}
-          ></div>
-          <div className="w-24 h-3 bg-gray-300 mt-3 rounded-full"></div>
-          <div className="w-36 h-3 bg-gray-300 mt-2 rounded-full"></div>
-        </div>
-      );
-    });
-}
 
 const JustArrived = () => {
   const { data, status, error, run, isLoading } = useAsync();
@@ -34,7 +23,7 @@ const JustArrived = () => {
     );
   }, [run]);
 
-  // console.log(data, status, error);
+  console.log(data, status, error);
 
   return (
     <section className="flex flex-col py-16">
@@ -51,15 +40,7 @@ const JustArrived = () => {
         {/* <!-- <div className="overflow-hidden z-10"> --> */}
 
         {isLoading ? (
-          <div
-            className="flex -mx-4 flex-row relative"
-            style={{
-              paddingLeft:
-                refContainer.current?.getBoundingClientRect()?.left - 16 || 0,
-            }}
-          >
-            <Loading />
-          </div>
+          <div className="flex -mx-4 flex-row relative">Loading</div>
         ) : error ? (
           JSON.stringify(error)
         ) : data.data.length === 0 ? (
@@ -68,7 +49,7 @@ const JustArrived = () => {
           <Carousel refContainer={refContainer}>
             {data.data.map((item) => {
               return (
-                <div className="px-4 relative card group" key={item.id}>
+                <div className="px-4 relative card group">
                   <div
                     className="rounded-xl overflow-hidden card-shadow relative"
                     style={{ width: "287px", height: "386px" }}

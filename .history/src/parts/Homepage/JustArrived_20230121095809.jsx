@@ -13,9 +13,10 @@ function Loading() {
           <div
             className="rounded-xl bg-gray-300 overflow-hidden card-shadow relative"
             style={{ width: "287px", height: "386px" }}
-          ></div>
-          <div className="w-24 h-3 bg-gray-300 mt-3 rounded-full"></div>
-          <div className="w-36 h-3 bg-gray-300 mt-2 rounded-full"></div>
+          >
+            <div className="w-24 h-3 bg-gray-300 mt-3 rounded-full"></div>
+            <div className="w-36 h-3 bg-gray-300 mt-2 rounded-full"></div>
+          </div>
         </div>
       );
     });

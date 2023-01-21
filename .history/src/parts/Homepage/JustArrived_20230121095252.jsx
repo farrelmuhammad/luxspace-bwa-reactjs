@@ -4,23 +4,6 @@ import fetch from "../../helpers/fetch";
 import { Link } from "react-router-dom";
 import Carousel from "../../components/Carousel";
 
-function Loading() {
-  return Array(6)
-    .fill()
-    .map((_, index) => {
-      return (
-        <div className="px-4 relative card group" key={index}>
-          <div
-            className="rounded-xl bg-gray-300 overflow-hidden card-shadow relative"
-            style={{ width: "287px", height: "386px" }}
-          ></div>
-          <div className="w-24 h-3 bg-gray-300 mt-3 rounded-full"></div>
-          <div className="w-36 h-3 bg-gray-300 mt-2 rounded-full"></div>
-        </div>
-      );
-    });
-}
-
 const JustArrived = () => {
   const { data, status, error, run, isLoading } = useAsync();
 
@@ -51,15 +34,7 @@ const JustArrived = () => {
         {/* <!-- <div className="overflow-hidden z-10"> --> */}
 
         {isLoading ? (
-          <div
-            className="flex -mx-4 flex-row relative"
-            style={{
-              paddingLeft:
-                refContainer.current?.getBoundingClientRect()?.left - 16 || 0,
-            }}
-          >
-            <Loading />
-          </div>
+          <div className="flex -mx-4 flex-row relative">Loading</div>
         ) : error ? (
           JSON.stringify(error)
         ) : data.data.length === 0 ? (
