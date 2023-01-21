@@ -121,7 +121,10 @@ const Sitemap = () => {
                 </Link>
               </li>
             </SitemapLinks>
-
+            <div className="px-4 w-full md:w-2/12 mb-4 md:mb-0 accordion">
+              <h5 className="text-lg font-semibold mb-2 relative">Explore</h5>
+              <ul className="h-0 invisible md:h-auto md:visible overflow-hidden"></ul>
+            </div>
             <div className="px-4 w-full md:w-3/12 mb-4 md:mb-0">
               <h5 className="text-lg font-semibold mb-2 relative">
                 Special Letter

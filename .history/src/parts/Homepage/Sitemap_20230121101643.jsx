@@ -2,10 +2,43 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/content/logo.png";
 
+function SitemaoLinks({ isActive, setActive, children, title }) {
+  return (
+    <div className="px-4 w-full md:w-2/12 mb-4 md:mb-0 accordion">
+      <h5 className="text-lg font-semibold mb-2 relative">
+        {title}
+        <button
+          className={[
+            "absolute block md:hidden right-0 transform -translate-y-1/2 focus:outline-none transition duration-200",
+            isActive ? "rotate-0" : "rotate-180",
+          ].join(" ")}
+        ></button>
+      </h5>
+      <ul className="h-0 invisible md:h-auto md:visible overflow-hidden">
+        <li>
+          <Link to="/shipping" className="hover:underline py-1 block">
+            Shipping
+          </Link>
+        </li>
+        <li>
+          <Link to="/refund" className="hover:underline py-1 block">
+            Refund
+          </Link>
+        </li>
+        <li>
+          <Link to="/promotion" className="hover:underline py-1 block">
+            Promotion
+          </Link>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
 const Sitemap = () => {
   return (
     <section className="sitemap">
-      <div className="border-t border-b border-gray-200 py-12 mt-16 px-4">
+      <div className="border-b border-gray-200 py-12 mt-16 px-4">
         <div className="flex justify-center mb-8">
           <img
             src={Logo}
@@ -63,12 +96,18 @@ const Sitemap = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/privacy-policy" className="hover:underline py-1 block">
+                  <Link
+                    to="/privacy-policy"
+                    className="hover:underline py-1 block"
+                  >
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link to="for-developer" className="hover:underline py-1 block">
+                  <Link
+                    to="for-developer"
+                    className="hover:underline py-1 block"
+                  >
                     For Developer
                   </Link>
                 </li>

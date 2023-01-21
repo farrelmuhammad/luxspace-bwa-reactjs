@@ -1,10 +1,44 @@
 import React from "react";
-import Logo from '../../assets/images/content/logo.png';
+import { Link } from "react-router-dom";
+import Logo from "../../assets/images/content/logo.png";
+
+function SitemaoLinks({ isActive, setActive, children, title }) {
+  return (
+    <div className="px-4 w-full md:w-2/12 mb-4 md:mb-0 accordion">
+      <h5 className="text-lg font-semibold mb-2 relative">
+        {title}
+        <button
+          className={[
+            "absolute block md:hidden right-0 transform -translate-y-1/2 focus:outline-none transition duration-200",
+            isActive ? "rotate-0" : "rotate-180",
+          ].join(" ")}
+        ></button>
+      </h5>
+      <ul className="h-0 invisible md:h-auto md:visible overflow-hidden">
+        <li>
+          <Link to="/shipping" className="hover:underline py-1 block">
+            Shipping
+          </Link>
+        </li>
+        <li>
+          <Link to="/refund" className="hover:underline py-1 block">
+            Refund
+          </Link>
+        </li>
+        <li>
+          <Link to="/promotion" className="hover:underline py-1 block">
+            Promotion
+          </Link>
+        </li>
+      </ul>
+    </div>
+  );
+}
 
 const Sitemap = () => {
   return (
-    <section className="">
-      <div className="border-t border-b border-gray-200 py-12 mt-16 px-4">
+    <section className="sitemap">
+      <div className="border-b border-gray-200 py-12 mt-16 px-4">
         <div className="flex justify-center mb-8">
           <img
             src={Logo}
@@ -17,19 +51,19 @@ const Sitemap = () => {
               <h5 className="text-lg font-semibold mb-2 relative">Overview</h5>
               <ul className="h-0 invisible md:h-auto md:visible overflow-hidden">
                 <li>
-                  <a href="#" className="hover:underline py-1 block">
+                  <Link to="/shipping" className="hover:underline py-1 block">
                     Shipping
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline py-1 block">
+                  <Link to="/refund" className="hover:underline py-1 block">
                     Refund
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline py-1 block">
+                  <Link to="/promotion" className="hover:underline py-1 block">
                     Promotion
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -37,19 +71,19 @@ const Sitemap = () => {
               <h5 className="text-lg font-semibold mb-2 relative">Company</h5>
               <ul className="h-0 invisible md:h-auto md:visible overflow-hidden">
                 <li>
-                  <a href="#" className="hover:underline py-1 block">
+                  <Link to="/about" className="hover:underline py-1 block">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline py-1 block">
+                  <Link to="/career" className="hover:underline py-1 block">
                     Career
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline py-1 block">
+                  <Link to="/contact-us" className="hover:underline py-1 block">
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -57,19 +91,25 @@ const Sitemap = () => {
               <h5 className="text-lg font-semibold mb-2 relative">Explore</h5>
               <ul className="h-0 invisible md:h-auto md:visible overflow-hidden">
                 <li>
-                  <a href="#" className="hover:underline py-1 block">
+                  <Link to="/term-conds" className="hover:underline py-1 block">
                     Terms & Conds
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline py-1 block">
+                  <Link
+                    to="/privacy-policy"
+                    className="hover:underline py-1 block"
+                  >
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline py-1 block">
+                  <Link
+                    to="for-developer"
+                    className="hover:underline py-1 block"
+                  >
                     For Developer
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
