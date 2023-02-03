@@ -116,7 +116,7 @@ const Header = ({ theme, position }) => {
               </li>
               <li className="ml-6">
                 <Link
-                  className={["cart flex items-center justify-center w-8 h-8", theme === "white" ? "text-black md:text-white" : "text-white md:text-black", state.cart && Object.keys(state.cart).length > 0 ? "cart-filled" : "", isCartChanged ? "animate-bounce" : ""
+                  className={["cart flex items-center justify-center w-8 h-8", theme === "white" ? "text-black md:text-white" : "text-white md:text-black", state.cart && Object.keys(state.cart).length > 0 ? "card-filled" : "", isCartChanged ? "animate-bounce" : ""
                   ].join(" ")}
                   to="/cart"
                 >

@@ -59,9 +59,6 @@ const ProductDetails = ({ data }) => {
 
           <button
             className="transition-all duration-200 bg-pink-400 text-black focus:bg-black focus:text-pink-400 rounded-full px-8 py-3 mt-4 inline-flex"
-            onClick={() => dispatch({
-              type: "ADD_TO_CART", item: data
-            })}
           >
             <svg
               className="fill-current mr-3"
