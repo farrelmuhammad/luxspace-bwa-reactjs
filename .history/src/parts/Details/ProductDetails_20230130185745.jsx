@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import ReactHtmlParser from "react-html-parser";
 
 const ProductDetails = ({ data }) => {
-  // console.log(data);
-  const [slider, setSlider] = useState(() => data?.imgUrls?.[0] || "");
+  console.log(data);
+  const [slider, setSlider] = useState(() => data?.imageUrls?.[0]);
   return (
     <section className="container mx-auto">
       <div className="flex flex-wrap my-4 md:my-12">
@@ -14,34 +14,72 @@ const ProductDetails = ({ data }) => {
         <div className="flex-1">
           <div className="slider">
             <div className="thumbnail">
-              {data?.imgUrls?.map((item) => {
-                return (
-                  <div
-                    className="px-2"
-                    key={item}
-                    onClick={() => setSlider(item)}
-                  >
-                    <div
-                      className={[
-                        "item",
-                        slider === item ? "bg-gray-100 selected" : "",
-                      ].join(" ")}
-                    >
-                      <img
-                        src={item}
-                        alt={item}
-                        className="object-cover w-full h-full rounded-lg"
-                      />
-                    </div>
-                  </div>
-                );
-              })}
+              <div className="px-2">
+                <div
+                  className="item selected"
+                  data-img="./images/content/showcase-1.front.jpg"
+                >
+                  <img
+                    src="./images/content/showcase-1.front.jpg"
+                    alt="front"
+                    className="object-cover w-full h-full rounded-lg"
+                  />
+                </div>
+              </div>
+              <div className="px-2">
+                <div
+                  className="item"
+                  data-img="./images/content/showcase-1.back.jpg"
+                >
+                  <img
+                    src="./images/content/showcase-1.back.jpg"
+                    alt="back"
+                    className="object-cover w-full h-full rounded-lg"
+                  />
+                </div>
+              </div>
+              <div className="px-2">
+                <div
+                  className="item"
+                  data-img="./images/content/showcase-1.rear.jpg"
+                >
+                  <img
+                    src="./images/content/showcase-1.rear.jpg"
+                    alt="rear"
+                    className="object-cover w-full h-full rounded-lg"
+                  />
+                </div>
+              </div>
+              <div className="px-2">
+                <div
+                  className="item"
+                  data-img="./images/content/showcase-1.side.jpg"
+                >
+                  <img
+                    src="./images/content/showcase-1.side.jpg"
+                    alt="side"
+                    className="object-cover w-full h-full rounded-lg"
+                  />
+                </div>
+              </div>
+              <div className="px-2">
+                <div
+                  className="item"
+                  data-img="./images/content/showcase-1.top.jpg"
+                >
+                  <img
+                    src="./images/content/showcase-1.top.jpg"
+                    alt="top"
+                    className="object-cover w-full h-full rounded-lg"
+                  />
+                </div>
+              </div>
             </div>
             <div className="preview">
               <div className="item rounded-lg h-full overflow-hidden">
                 <img
-                  src={slider}
-                  alt={slider}
+                  src="./images/content/showcase-1.front.jpg"
+                  alt="front"
                   className="object-cover w-full h-full rounded-lg"
                 />
               </div>

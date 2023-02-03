@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactHtmlParser from "react-html-parser";
 
 const ProductDetails = ({ data }) => {
-  // console.log(data);
+  console.log(data);
   const [slider, setSlider] = useState(() => data?.imgUrls?.[0] || "");
   return (
     <section className="container mx-auto">

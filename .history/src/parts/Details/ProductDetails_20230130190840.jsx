@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactHtmlParser from "react-html-parser";
 
 const ProductDetails = ({ data }) => {
-  // console.log(data);
+  console.log(data);
   const [slider, setSlider] = useState(() => data?.imgUrls?.[0] || "");
   return (
     <section className="container mx-auto">
@@ -21,12 +21,7 @@ const ProductDetails = ({ data }) => {
                     key={item}
                     onClick={() => setSlider(item)}
                   >
-                    <div
-                      className={[
-                        "item",
-                        slider === item ? "bg-gray-100 selected" : "",
-                      ].join(" ")}
-                    >
+                    <div className="item selected">
                       <img
                         src={item}
                         alt={item}

@@ -11,7 +11,7 @@ function App() {
     <>
       <Routes>
         <Route exact path="/" element={<Homepage />} />
-        <Route exact path="/categories/:idc" element={<Details />} />
+        <Route path="/categories/:idc" element={<Details />} />
         <Route path="/categories/:idc/products/:idp" element={<Details />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/congratulation" element={<Congratulation />} />

@@ -1,47 +1,85 @@
-import React, { useState } from "react";
-import ReactHtmlParser from "react-html-parser";
+import React, { useEffect } from "react";
+import useAsync from "../../helpers/hooks/useAsync";
+import fetch from "../../helpers/fetch";
+import { useParams } from "react-router-dom";
 
-const ProductDetails = ({ data }) => {
-  // console.log(data);
-  const [slider, setSlider] = useState(() => data?.imgUrls?.[0] || "");
+const ProductDetails = () => {
   return (
     <section className="container mx-auto">
       <div className="flex flex-wrap my-4 md:my-12">
         <div className="w-full md:hidden px-4">
-          <h2 className="text-5xl font-semibold">{data.title}</h2>
-          <span className="text-xl">IDR {data.price}</span>
+          <h2 className="text-5xl font-semibold">Chair Thatty</h2>
+          <span className="text-xl">IDR 12.000.000</span>
         </div>
         <div className="flex-1">
           <div className="slider">
             <div className="thumbnail">
-              {data?.imgUrls?.map((item) => {
-                return (
-                  <div
-                    className="px-2"
-                    key={item}
-                    onClick={() => setSlider(item)}
-                  >
-                    <div
-                      className={[
-                        "item",
-                        slider === item ? "bg-gray-100 selected" : "",
-                      ].join(" ")}
-                    >
-                      <img
-                        src={item}
-                        alt={item}
-                        className="object-cover w-full h-full rounded-lg"
-                      />
-                    </div>
-                  </div>
-                );
-              })}
+              <div className="px-2">
+                <div
+                  className="item selected"
+                  data-img="./images/content/showcase-1.front.jpg"
+                >
+                  <img
+                    src="./images/content/showcase-1.front.jpg"
+                    alt="front"
+                    className="object-cover w-full h-full rounded-lg"
+                  />
+                </div>
+              </div>
+              <div className="px-2">
+                <div
+                  className="item"
+                  data-img="./images/content/showcase-1.back.jpg"
+                >
+                  <img
+                    src="./images/content/showcase-1.back.jpg"
+                    alt="back"
+                    className="object-cover w-full h-full rounded-lg"
+                  />
+                </div>
+              </div>
+              <div className="px-2">
+                <div
+                  className="item"
+                  data-img="./images/content/showcase-1.rear.jpg"
+                >
+                  <img
+                    src="./images/content/showcase-1.rear.jpg"
+                    alt="rear"
+                    className="object-cover w-full h-full rounded-lg"
+                  />
+                </div>
+              </div>
+              <div className="px-2">
+                <div
+                  className="item"
+                  data-img="./images/content/showcase-1.side.jpg"
+                >
+                  <img
+                    src="./images/content/showcase-1.side.jpg"
+                    alt="side"
+                    className="object-cover w-full h-full rounded-lg"
+                  />
+                </div>
+              </div>
+              <div className="px-2">
+                <div
+                  className="item"
+                  data-img="./images/content/showcase-1.top.jpg"
+                >
+                  <img
+                    src="./images/content/showcase-1.top.jpg"
+                    alt="top"
+                    className="object-cover w-full h-full rounded-lg"
+                  />
+                </div>
+              </div>
             </div>
             <div className="preview">
               <div className="item rounded-lg h-full overflow-hidden">
                 <img
-                  src={slider}
-                  alt={slider}
+                  src="./images/content/showcase-1.front.jpg"
+                  alt="front"
                   className="object-cover w-full h-full rounded-lg"
                 />
               </div>
@@ -49,8 +87,8 @@ const ProductDetails = ({ data }) => {
           </div>
         </div>
         <div className="flex-1 px-4 md:p-6">
-          <h2 className="text-5xl font-semibold">{data.title}</h2>
-          <p className="text-xl">IDR {data.price}</p>
+          <h2 className="text-5xl font-semibold">Chair Thatty</h2>
+          <p className="text-xl">IDR 12.000.000</p>
 
           <a
             href="cart.html"
@@ -73,7 +111,16 @@ const ProductDetails = ({ data }) => {
           <hr className="my-8" />
 
           <h6 className="text-xl font-semibold mb-4">About the product</h6>
-          {data.description ? ReactHtmlParser(data.description) : ""}
+          <p className="text-xl leading-7 mb-6">
+            Tailored to a level of perfection synonymous with that of a Savile
+            Row suit and with understated quality in the detail, Jetty has been
+            influenced by timeless 1950s style.
+          </p>
+          <p className="text-xl leading-7">
+            Providing a subtle nod to the past, Jetty also provides a perfect
+            solution for the way we work today. A comprehensive product family,
+            Jetty features a variety of elegant chairs and sofas.
+          </p>
         </div>
       </div>
     </section>

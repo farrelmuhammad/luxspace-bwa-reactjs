@@ -80,7 +80,7 @@ function LoadingSuggestion() {
                     <div className="bg-gray-300 animate-pulse rounded-lg h-full overflow-hidden" style={{ width: 287, height: 150 }}></div>
                   </div>
                   <div className="w-56 h-4 mt-6 bg-gray-300 animate-pulse rounded-full"></div>
-                  <div className="w-40 h-4 mt-3 bg-gray-300 animate-pulse rounded-full"></div>
+                  <div className="w-40 h-4 mt-6 bg-gray-300 animate-pulse rounded-full"></div>
                 </div>
               </div>
             )
