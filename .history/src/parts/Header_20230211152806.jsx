@@ -48,7 +48,7 @@ const Header = ({ theme, position }) => {
                     "hover:underline",
                     theme === "white"
                       ? "text-black md:text-white"
-                      : "text-black md:text-black ",
+                      : "text-white md:text-black ",
                   ].join(" ")}
                 >
                   Showcase
@@ -61,7 +61,7 @@ const Header = ({ theme, position }) => {
                     "hover:underline",
                     theme === "white"
                       ? "text-black md:text-white"
-                      : "text-black md:text-black ",
+                      : "text-white md:text-black ",
                   ].join(" ")}
                 >
                   Catalog
@@ -74,7 +74,7 @@ const Header = ({ theme, position }) => {
                     "hover:underline",
                     theme === "white"
                       ? "text-black md:text-white"
-                      : "text-black md:text-black ",
+                      : "text-white md:text-black ",
                   ].join(" ")}
                 >
                   Delivery
@@ -87,7 +87,7 @@ const Header = ({ theme, position }) => {
                     "hover:underline",
                     theme === "white"
                       ? "text-black md:text-white"
-                      : "text-black md:text-black ",
+                      : "text-white md:text-black ",
                   ].join(" ")}
                 >
                   Rewards
@@ -99,11 +99,7 @@ const Header = ({ theme, position }) => {
             <ul className="items-center flex">
               <li className="ml-6 block md:hidden">
                 <button
-                  className={["flex z-50 items-center justify-center w-8 h-8 text-black md:text-white focus:outline-none",
-                    toggleMainMenu ? "fixed top-0 right-0" : "relative",
-                    theme === "white"
-                      ? "text-black md:text-white"
-                      : "text-black md:text-black "].join(" ")}
+                  className={["flex z-50 items-center justify-center w-8 h-8 text-black md:text-white focus:outline-none", toggleMainMenu ? "fixed top-0 right-0" : "relative"].join(" ")}
                   onClick={() => setToggleMainMenu(prev => !prev)}
                 >
                   <svg

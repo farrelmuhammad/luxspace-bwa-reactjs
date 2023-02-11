@@ -24,7 +24,7 @@ const Header = ({ theme, position }) => {
   }, [state.cart])
 
   return (
-    <header className={[position, "w-full z-40 px-4"].join(" ")}>
+    <header className={[position, "w-full z-20 px-4"].join(" ")}>
       <div className="container mx-auto py-5">
         <div className="flex flex-stretch items-center">
           <div className="w-56 items-center flex">
@@ -47,8 +47,8 @@ const Header = ({ theme, position }) => {
                   className={[
                     "hover:underline",
                     theme === "white"
-                      ? "text-black md:text-white"
-                      : "text-black md:text-black ",
+                      ? "text-black md text-white"
+                      : "text-white md:text-black ",
                   ].join(" ")}
                 >
                   Showcase
@@ -60,8 +60,8 @@ const Header = ({ theme, position }) => {
                   className={[
                     "hover:underline",
                     theme === "white"
-                      ? "text-black md:text-white"
-                      : "text-black md:text-black ",
+                      ? "text-black md text-white"
+                      : "text-white md:text-black ",
                   ].join(" ")}
                 >
                   Catalog
@@ -73,8 +73,8 @@ const Header = ({ theme, position }) => {
                   className={[
                     "hover:underline",
                     theme === "white"
-                      ? "text-black md:text-white"
-                      : "text-black md:text-black ",
+                      ? "text-black md text-white"
+                      : "text-white md:text-black ",
                   ].join(" ")}
                 >
                   Delivery
@@ -86,8 +86,8 @@ const Header = ({ theme, position }) => {
                   className={[
                     "hover:underline",
                     theme === "white"
-                      ? "text-black md:text-white"
-                      : "text-black md:text-black ",
+                      ? "text-black md text-white"
+                      : "text-white md:text-black ",
                   ].join(" ")}
                 >
                   Rewards
@@ -99,11 +99,7 @@ const Header = ({ theme, position }) => {
             <ul className="items-center flex">
               <li className="ml-6 block md:hidden">
                 <button
-                  className={["flex z-50 items-center justify-center w-8 h-8 text-black md:text-white focus:outline-none",
-                    toggleMainMenu ? "fixed top-0 right-0" : "relative",
-                    theme === "white"
-                      ? "text-black md:text-white"
-                      : "text-black md:text-black "].join(" ")}
+                  className={["flex z-50 items-center justify-center w-8 h-8 text-black md:text-white focus:outline-none", toggleMainMenu ? "fixed top-0 right-0" : "relative"].join(" ")}
                   onClick={() => setToggleMainMenu(prev => !prev)}
                 >
                   <svg

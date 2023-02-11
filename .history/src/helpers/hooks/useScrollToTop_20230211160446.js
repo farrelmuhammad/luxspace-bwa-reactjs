@@ -3,11 +3,11 @@ import { useLayoutEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom'
 
 export default function useScrollToTop() {
-//   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const location = useLocation();
 
-//   console.log(location.key)
+  console.log(location.key)
 
   useLayoutEffect(() => {
     window.scrollTo({
@@ -16,5 +16,5 @@ export default function useScrollToTop() {
         behavior: 'smooth'
     })
     
-  }, [location.key])
+  }, [navigate])
 }
