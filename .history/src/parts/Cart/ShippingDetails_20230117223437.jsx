@@ -15,7 +15,7 @@ const ShippingDetails = () => {
             </div>
 
             <div className="flex flex-col mb-4">
-              <label for="complete-name" className="text-sm mb-2">
+              <label htmlFor="complete-name" className="text-sm mb-2">
                 Complete Name
               </label>
               <input
@@ -28,7 +28,7 @@ const ShippingDetails = () => {
             </div>
 
             <div className="flex flex-col mb-4">
-              <label for="email" className="text-sm mb-2">
+              <label htmlFor="email" className="text-sm mb-2">
                 Email Address
               </label>
               <input
@@ -41,7 +41,7 @@ const ShippingDetails = () => {
             </div>
 
             <div className="flex flex-col mb-4">
-              <label for="address" className="text-sm mb-2">
+              <label htmlFor="address" className="text-sm mb-2">
                 Address
               </label>
               <input
@@ -54,7 +54,7 @@ const ShippingDetails = () => {
             </div>
 
             <div className="flex flex-col mb-4">
-              <label for="phone-number" className="text-sm mb-2">
+              <label htmlFor="phone-number" className="text-sm mb-2">
                 Phone Number
               </label>
               <input
@@ -67,7 +67,7 @@ const ShippingDetails = () => {
             </div>
 
             <div className="flex flex-col mb-4">
-              <label for="complete-name" className="text-sm mb-2">
+              <label htmlFor="complete-name" className="text-sm mb-2">
                 Choose Courier
               </label>
               <div className="flex -mx-2 flex-wrap">
@@ -103,7 +103,7 @@ const ShippingDetails = () => {
             </div>
 
             <div className="flex flex-col mb-4">
-              <label for="complete-name" className="text-sm mb-2">
+              <label htmlFor="complete-name" className="text-sm mb-2">
                 Choose Payment
               </label>
               <div className="flex -mx-2 flex-wrap">
