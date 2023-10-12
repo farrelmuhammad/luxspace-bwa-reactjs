@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../helpers/hooks/useGlobalContext";
 
+import "../../helpers/format/currency"
+
 const ShoppingCart = () => {
   const { state, dispatch } = useGlobalContext();
 
@@ -68,13 +70,13 @@ const ShoppingCart = () => {
                   </h6>
                   <span className="text-sm md:text-lg">{item.category.title}</span>
                   <h6 className="font-semibold text-base md:text-lg block md:hidden">
-                    IDR {item.price}
+                    {item.price.currency()}
                   </h6>
                 </div>
               </div>
               <div className="px-4 w-auto flex-none md:flex-1 md:w-5/12 hidden md:block">
                 <div className="">
-                  <h6 className="font-semibold text-lg">IDR {item.price}</h6>
+                  <h6 className="font-semibold text-lg">{item.price.currency()}</h6>
                 </div>
               </div>
               <div className="px-4 w-2/12">

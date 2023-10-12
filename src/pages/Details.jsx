@@ -12,6 +12,7 @@ import useAsync from "../helpers/hooks/useAsync";
 import fetchData from "../helpers/fetch";
 // import useScrollToTop from "../helpers/hooks/useScrollToTop";
 import Document from "../parts/Document";
+import PageErrorMessage from "../parts/PageErrorMessage";
 
 function LoadingProductDetails() {
   return (
@@ -24,19 +25,18 @@ function LoadingProductDetails() {
         <div className="flex-1">
           <div className="slider">
             <div className="thumbnail">
-              {Array(5).fill().map((_, index) => {
-                return (
-                  <div
-                    className="px-4 relative card group"
-                    key={index}
-                  >
-                    <div
-                      className="rounded-xl item bg-gray-300 animate-pulse" style={{ width: 106, height: 106 }}
-                    >
+              {Array(5)
+                .fill()
+                .map((_, index) => {
+                  return (
+                    <div className="px-4 relative card group" key={index}>
+                      <div
+                        className="rounded-xl item bg-gray-300 animate-pulse"
+                        style={{ width: 106, height: 106 }}
+                      ></div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
             </div>
             <div className="preview">
               <div className="item rounded-lg h-full overflow-hidden">
@@ -61,7 +61,7 @@ function LoadingProductDetails() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 function LoadingSuggestion() {
@@ -70,34 +70,44 @@ function LoadingSuggestion() {
       <div className="container mx-auto">
         <div className="flex flex-start mb-4">
           <h3 className="text-2xl capitalize font-semibold">
-            Complete your room <br className="" />with what we designed
+            Complete your room <br className="" />
+            with what we designed
           </h3>
         </div>
         <div className="flex overflow-x-auto mb-4 -mx-3">
-          {Array(4).fill().map((_, index) => {
-            return (
-              <div className="px-3 flex-none" style={{ width: 320 }} key={index}>
-                <div className="rounded-xl p-4 pb-8 relative bg-white">
-                  <div className="rounded-xl overflow-hidden card-shadow w-full h-36">
-                    <div className="bg-gray-300 animate-pulse rounded-lg h-full overflow-hidden" style={{ width: 287, height: 150 }}></div>
+          {Array(4)
+            .fill()
+            .map((_, index) => {
+              return (
+                <div
+                  className="px-3 flex-none"
+                  style={{ width: 320 }}
+                  key={index}
+                >
+                  <div className="rounded-xl p-4 pb-8 relative bg-white">
+                    <div className="rounded-xl overflow-hidden card-shadow w-full h-36">
+                      <div
+                        className="bg-gray-300 animate-pulse rounded-lg h-full overflow-hidden"
+                        style={{ width: 287, height: 150 }}
+                      ></div>
+                    </div>
+                    <div className="w-56 h-4 mt-6 bg-gray-300 animate-pulse rounded-full"></div>
+                    <div className="w-40 h-4 mt-3 bg-gray-300 animate-pulse rounded-full"></div>
                   </div>
-                  <div className="w-56 h-4 mt-6 bg-gray-300 animate-pulse rounded-full"></div>
-                  <div className="w-40 h-4 mt-3 bg-gray-300 animate-pulse rounded-full"></div>
                 </div>
-              </div>
-            )
-          })}
+              );
+            })}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 const Details = () => {
   // useScrollToTop()
   const { idp } = useParams();
-  
-  const { data, run, isLoading } = useAsync();
+
+  const { data, error, run, isLoading, isError } = useAsync();
 
   useEffect(() => {
     run(
@@ -109,7 +119,7 @@ const Details = () => {
   // console.log(data);
   return (
     <Document>
-      <Header />
+      <Header theme="black" />
       <Breadcrumb
         list={[
           { url: "/", name: "Home" },
@@ -117,11 +127,22 @@ const Details = () => {
           { url: "/categories/91231/products/7888", name: "Details" },
         ]}
       />
-      {isLoading ? <LoadingProductDetails /> : <ProductDetails data={data} />}
-      {isLoading ? (
-        <LoadingSuggestion />
+
+      {isError ? (
+        <PageErrorMessage title="Product Not Found" body={error.errors.message} />
       ) : (
-        <Suggestions data={data?.relatedProducts || {}} />
+        <>
+          {isLoading ? (
+            <LoadingProductDetails />
+          ) : (
+            <ProductDetails data={data} />
+          )}
+          {isLoading ? (
+            <LoadingSuggestion />
+          ) : (
+            <Suggestions data={data?.relatedProducts || {}} />
+          )}
+        </>
       )}
       <Sitemap />
       <Footer />

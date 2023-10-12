@@ -7,6 +7,8 @@ import useAsync from "../../helpers/hooks/useAsync";
 
 import fetch from "../../helpers/fetch";
 
+import '../../helpers/format/Thousand'
+
 function Loading({ ratio = {} }) {
   const dummy = [
     {
@@ -131,7 +133,7 @@ const BrowseRoom = () => {
                   >
                     <h5 className="text-lg font-semibold">{item.title}</h5>
                     <span className="">
-                      {item.products} item{item.products > 1 ? "s" : ""}
+                      {item.products.thousand()} item{item.products > 1 ? "s" : ""}
                     </span>
                   </div>
                 </div>
